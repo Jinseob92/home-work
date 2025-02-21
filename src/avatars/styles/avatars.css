@@ -28,11 +28,6 @@ img {
   height: 64px;
   border-radius: 50%;
 }
-.shadow {
-  width: 64px;
-  height: 64px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-}
 
 .topbox {
   margin-bottom: 20px;
