@@ -1,0 +1,85 @@
+/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+
+/* 기본 글자 크기 및 색 지정 */
+body * {
+  font-size: 1rem;
+  color: #121212;
+  box-sizing: content-box;
+}
+
+.loginview {
+  margin-top: 5rem;
+
+  /* 네이버 로고 */
+  .logo {
+    svg {
+      display: block;
+      width: 230px;
+      margin: auto;
+    }
+  }
+
+  /* 아이디 비밀번호 입력 화면 */
+  .login {
+    border: 1px solid green;
+    margin-top: 80px;
+    /* 아이디 입력 칸 */
+    .email {
+      display: block;
+      inline-size: 100%;
+
+      border: 1px solid #dadada;
+      font-size: 14px;
+      height: 2.8125rem;
+      background: #fff;
+    }
+
+    /* 비밀번호 입력 칸 */
+    .password {
+      display: block;
+      inline-size: inherit;
+      border: 1px solid #dadada;
+      font-size: 14px;
+      height: 2.8125rem;
+      background: #fff;
+    }
+  }
+
+  /* 로그인 버튼 */
+  .loginbutton {
+    display: block;
+    inline-size: 100%;
+    font-size: 16px;
+    height: 2.8125rem;
+    color: #fff;
+    background: #03cf5d;
+    margin-top: 20px;
+
+    text-align: center;
+    align-content: center;
+
+    &:focus {
+      color: #03cf5d;
+      background: #e9f0fd;
+    }
+  }
+
+  /* CheckBox  */
+  .checkbox {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+  }
+
+  /* IP 보안 */
+  .ip_security {
+    font-size: 16px;
+    color: #121212;
+    text-decoration: none;
+  }
+
+  /* 화면의 아랫단 화면 */
+  footer {
+    margin-top: 10px;
+  }
+}
