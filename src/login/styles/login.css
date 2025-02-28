@@ -26,7 +26,6 @@ body * {
     /* 아이디 입력 칸 */
     .email {
       display: block;
-      inline-size: 100%;
 
       border: 1px solid #dadada;
       font-size: 14px;
@@ -48,7 +47,7 @@ body * {
   /* 로그인 버튼 */
   .loginbutton {
     display: block;
-    inline-size: 100%;
+
     font-size: 16px;
     height: 2.8125rem;
     color: #fff;
