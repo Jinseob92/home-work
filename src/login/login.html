@@ -20,10 +20,8 @@
     <link rel="stylesheet" href="./styles/login.css" />
   </head>
   <body>
-    <div class="loginform">
-      
-      <div class="loginview">
-      
+    <form class="loginform">
+      <div class="loginview">   
           <!-- 로고 이미지 -->
         <div class="logo"><svg width="230" height="44" viewBox="0 0 230 44" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M30.0764 23.5394L13.6301 0H0V43.9824H14.279V20.443L30.7252 43.9824H44.3554V0H30.0764V23.5394Z" fill="#03CF5D"/>
@@ -34,19 +32,26 @@
       </svg></div>
       <!-- 로그인 텍스트 화면 -->
         <div class="login">
-          <input type="text" title="필수 입력" name="id(email)" label="ID" placeholder="아이디(이메일)" class="email" required aria-required></input>
-          <input type="text" name="password" label="pathword" placeholder="비밀번호" class="password" required aria-required></input>
+          
+          <input type="email" name="id(email)" label="ID" placeholder="아이디(이메일)" class="email" required ></input>
+          <p id="error-message">아이디는 이메일 형식으로 작성해주세요.</p>
+          <input type="password" name="password" label="password" minlength="10" placeholder="비밀번호" class="password" required></input>
+          <p id="error-message">비밀번호는 10자리 이상 입력해주세요.</p>
         </div>
         <div class="buttonwrap">
           <button tabindex="-1" type="submit" class="loginbutton">로그인</button>
         </div>
         <!-- 로그인 텍스트 아랫 단 -->
         <footer>
-          <img tabindex="0"
-            class="checkbox"
-            src="./images/Checkbox-unchecked.svg"
-            alt="체크박스 해제"
-          />
+          <!-- unchecked 이미지 -->
+            <img tabindex="0"
+              class="uncheckbox"
+              src="./images/Checkbox-unchecked.svg"
+              alt="체크박스 해제"
+            />
+            <!-- checked 이미지 -->
+             <img src="./images/Checkbox.svg" alt="체크박스 체크" class="checkbox">
+  
           <span class="loginstate">로그인 상태 유지</span>
           <div class="security">
             <a href="./src/login/pages/ip_security.html" class="ip_security" target="_blank"
@@ -56,6 +61,7 @@
           </div>
         </footer>
       </div>
-    </div>
+    </form>
+   
   </body>
 </html>
