@@ -1,84 +1,143 @@
 /* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+@import "../../../../learn-html-css/src/common/best-reset.css";
 
 /* 기본 글자 크기 및 색 지정 */
 body * {
-  font-size: 1rem;
+  font-size: 16px;
   color: #121212;
-  box-sizing: content-box;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    position: relative;
+    padding: 0px;
+    margin: 0; /* 기본 여백 제거 */
+  }
 }
 
 .loginview {
   margin-top: 5rem;
-
+  @media (min-width: 768px) {
+    width: 500px;
+    position: absolute; /* 절대 위치 설정 */
+    top: 25%;
+    left: 25%;
+  }
   /* 네이버 로고 */
   .logo {
     svg {
       display: block;
-      width: 230px;
+      width: 14.375rem;
       margin: auto;
     }
   }
 
   /* 아이디 비밀번호 입력 화면 */
   .login {
-    border: 1px solid green;
-    margin-top: 80px;
+    margin-top: 5rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
     /* 아이디 입력 칸 */
     .email {
       display: block;
-
-      border: 1px solid #dadada;
-      font-size: 14px;
+      inline-size: 100%;
+      border: 0.0625rem solid #dadada;
+      font-size: 0.875rem;
       height: 2.8125rem;
       background: #fff;
+      &:focus {
+        border: 1px solid #03cf5d;
+        background: #e9f0fd;
+        outline: none;
+      }
     }
 
     /* 비밀번호 입력 칸 */
     .password {
       display: block;
-      inline-size: inherit;
-      border: 1px solid #dadada;
-      font-size: 14px;
+      inline-size: 100%;
+      border: 0.0625rem solid #dadada;
+      font-size: 0.875rem;
       height: 2.8125rem;
       background: #fff;
+      &:focus {
+        border: 1px solid #03cf5d;
+        background: #e9f0fd;
+        outline: none;
+      }
     }
   }
 
   /* 로그인 버튼 */
-  .loginbutton {
-    display: block;
 
-    font-size: 16px;
-    height: 2.8125rem;
-    color: #fff;
-    background: #03cf5d;
-    margin-top: 20px;
+  .buttonwrap {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 1.25rem;
 
-    text-align: center;
-    align-content: center;
-
-    &:focus {
-      color: #03cf5d;
-      background: #e9f0fd;
+    .loginbutton {
+      display: block;
+      box-sizing: border-box;
+      inline-size: 100%;
+      margin-top: 1.25rem;
+      margin-left: 1.25rem;
+      margin-right: 1.25rem;
+      font-size: 1rem;
+      height: 2.8125rem;
+      color: #fff;
+      background: #03cf5d;
+      text-align: center;
+      align-content: center;
     }
   }
 
   /* CheckBox  */
   .checkbox {
-    width: 24px;
-    height: 24px;
-    margin-right: 5px;
-  }
-
-  /* IP 보안 */
-  .ip_security {
-    font-size: 16px;
-    color: #121212;
-    text-decoration: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.3125rem;
   }
 
   /* 화면의 아랫단 화면 */
   footer {
-    margin-top: 10px;
+    margin-top: 0.625rem;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.3125rem;
+    }
+    /* IP 보안 */
+    .ip_security {
+      font-size: 1rem;
+      color: #121212;
+      text-decoration: none;
+    }
+
+    /* 데스크탑용 반응형 화면 */
+    @media (min-width: 768px) {
+      .security {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .onoff {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    @media (max-width: 768px) {
+      float: right;
+    }
+    @media (max-width: 768px) {
+      .onoff,
+      a {
+        display: none;
+      }
+    }
   }
 }
