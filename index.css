@@ -1,0 +1,6 @@
+.homework-links {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  inline-size: 100%;
+  overflow-y: scroll;
+}
