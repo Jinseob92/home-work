@@ -75,6 +75,13 @@
       }
     }
 
+    @media (min-resolution: 192dpi) {
+      background-image: url(../products/ipad_pro_2x.jpeg);
+    }
+    @media (min-width: 64rem) and (min-resolution: 192dpi) {
+      background-image: url(../products/ipad_pro_wide_2x.jpeg);
+    }
+
     @media (min-width: 1024px) {
       background-image: url(../products/ipad_pro_wide.jpeg);
       .pro {
@@ -289,6 +296,7 @@
     }
     .iphone {
       position: absolute;
+      width: 100%;
       color: #000;
       top: 23%;
       left: 50%;
